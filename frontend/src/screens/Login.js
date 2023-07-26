@@ -55,7 +55,7 @@ const Login = ({ location, history }) => {
             <Link
               to={redirect ? `/register?redirect=${redirect}` : "/register"}
             >
-              Create Account
+              Criar conta
             </Link>
           </p>
         </form>

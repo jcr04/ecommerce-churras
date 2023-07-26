@@ -68,7 +68,7 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Customer</strong>
+                  <strong>Cliente</strong>
                 </h5>
                 <p>{userInfo.name}</p>
                 <p>{userInfo.email}</p>
@@ -85,7 +85,7 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Order info</strong>
+                  <strong>Informações do pedido</strong>
                 </h5>
                 <p>Shipping: {cart.shippingAddress.country}</p>
                 <p>Pay method: {cart.paymentMethod}</p>
@@ -102,7 +102,7 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Deliver to</strong>
+                  <strong>Entregar para</strong>
                 </h5>
                 <p>
                   Address: {cart.shippingAddress.city},{" "}
@@ -131,7 +131,7 @@ const PlaceOrderScreen = ({ history }) => {
                       </Link>
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
-                      <h4>QUANTITY</h4>
+                      <h4>QUANTIDADE</h4>
                       <h6>{item.qty}</h6>
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
@@ -149,19 +149,19 @@ const PlaceOrderScreen = ({ history }) => {
               <tbody>
                 <tr>
                   <td>
-                    <strong>Products</strong>
+                    <strong>Produtos</strong>
                   </td>
                   <td>${cart.itemsPrice}</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Shipping</strong>
+                    <strong>Envio</strong>
                   </td>
                   <td>${cart.shippingPrice}</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Tax</strong>
+                    <strong>Taxa</strong>
                   </td>
                   <td>${cart.taxPrice}</td>
                 </tr>
@@ -175,7 +175,7 @@ const PlaceOrderScreen = ({ history }) => {
             </table>
             {cart.cartItems.length === 0 ? null : (
               <button type="submit" onClick={placeOrderHandler}>
-                PLACE ORDER
+                Encomendar
               </button>
             )}
             {error && (

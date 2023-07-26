@@ -84,7 +84,7 @@ const SingleProduct = ({ match }) => {
                   </div>                
                 </div>
                 <div className="col-md-6">
-                <h6>ESCREVA SUA AVALIAÇÃO</h6>
+                <h6>DÊ SUA AVALIAÇÃO</h6>
                 <div className="my-4"></div>
                  
                   <form>
@@ -118,7 +118,7 @@ const SingleProduct = ({ match }) => {
                       <Link to="/login">
                         " <strong>Login</strong> "
                       </Link>{" "}
-                      para escrever sua avaliação.{" "}
+                      para enviar sua avaliação.{" "}
                       </Message>
                   </div>
                       
