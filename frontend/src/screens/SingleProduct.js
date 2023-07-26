@@ -27,19 +27,19 @@ const SingleProduct = ({ match }) => {
 
                   <div className="product-count col-lg-7 ">
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Price</h6>
+                      <h6>Valor</h6>
                       <span>${product.price}</span>
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Status</h6>
+                      <h6>Disponibilidade</h6>
                       {product.countInStock > 0 ? (
-                        <span>In Stock</span>
+                        <span>em estoque</span>
                       ) : (
-                        <span>unavailable</span>
+                        <span>sem estoque</span>
                       )}
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Reviews</h6>
+                      <h6>Avaliações</h6>
                       <Rating
                         value={product.rating}
                         text={`${product.numReviews} reviews`}
@@ -48,7 +48,7 @@ const SingleProduct = ({ match }) => {
                     {product.countInStock > 0 ? (
                       <>
                         <div className="flex-box d-flex justify-content-between align-items-center">
-                          <h6>Quantity</h6>
+                          <h6>Quantidade</h6>
                           <select>                            
                             {[...Array(product.countInStock).keys()].map(
                               (x) => (
@@ -58,7 +58,7 @@ const SingleProduct = ({ match }) => {
                               ))}
                           </select>
                         </div>
-                        <button className="round-black-btn">Add To Cart</button>
+                        <button className="round-black-btn">adicionar</button>
                       </>
                     ) : null}
                   </div>
@@ -69,12 +69,12 @@ const SingleProduct = ({ match }) => {
             {/* RATING */}
             <div className="row my-5">
               <div className="col-md-6">
-                <h6 className="mb-3">REVIEWS</h6>                
-                  <Message variant={"alert-info mt-3"}>No Reviews</Message>              
+                <h6 className="mb-3">AVALIAÇÕES</h6>                
+                  <Message variant={"alert-info mt-3"}>...</Message>              
                   <div className="mb-5 mb-md-3 bg-light p-3 shadow-sm rounded">                  
-                    <strong>Admin Doe</strong>
+                    <strong>Admin TEST</strong>
                     <Rating/>
-                    <span>Jan 12 2021</span>
+                    <span>April 04 2023</span>
                     <div className="alert alert-info mt-3">
                       Lorem Ipsum is simply dummy text of the printing and typesetting 
                       industry. Lorem Ipsum has been the industry's standard dummy
@@ -84,23 +84,23 @@ const SingleProduct = ({ match }) => {
                   </div>                
                 </div>
                 <div className="col-md-6">
-                <h6>WRITE A CUSTOMER REVIEW</h6>
+                <h6>ESCREVA SUA AVALIAÇÃO</h6>
                 <div className="my-4"></div>
                  
                   <form>
                     <div className="my-4">
-                      <strong>Rating</strong>
+                      <strong>Avaliação</strong>
                       <select className="col-12 bg-light p-3 mt-2 border-0 rounded">
-                        <option value="">Select...</option>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very Good</option>
-                        <option value="5">5 - Excellent</option>
+                        <option value="">Selecione...</option>
+                        <option value="1">1 - Ruim</option>
+                        <option value="2">2 - Razoável</option>
+                        <option value="3">3 - Boa</option>
+                        <option value="4">4 - Muito boa</option>
+                        <option value="5">5 - Excelente</option>
                       </select>
                     </div>
                     <div className="my-4">
-                      <strong>Comment</strong>
+                      <strong>Comentário:</strong>
                       <textarea
                         row="3"                       
                         className="col-12 bg-light p-3 mt-2 border-0 rounded"
@@ -108,17 +108,17 @@ const SingleProduct = ({ match }) => {
                     </div>
                     <div className="my-3">
                       <button className="col-12 bg-black border-0 p-3 rounded text-white">
-                        SUBMIT
+                        ENVIAR
                       </button>
                     </div>
                   </form>                
                   <div className="my-3">
                     <Message variant={"alert-warning"}>
-                      Please{" "}
+                      Entre com{" "}
                       <Link to="/login">
                         " <strong>Login</strong> "
                       </Link>{" "}
-                      to write a review{" "}
+                      para escrever sua avaliação.{" "}
                       </Message>
                   </div>
                       
