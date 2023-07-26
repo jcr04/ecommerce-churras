@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
+import logo from '../imgs/logoMain.png'
 
 const Header = () => {
   const [keyword, setKeyword] = useState();
@@ -33,7 +34,7 @@ const Header = () => {
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
               <p>+55 11 5899 9999</p>
-              <p>info@ecommerce.com</p>
+              <p>info@BBQFast.com</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <Link to="">
@@ -143,7 +144,7 @@ const Header = () => {
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center">
                 <Link className="navbar-brand" to="/">
-                  <img alt="logo" src="/images/logo.png" />
+                  <img alt="logo" src={logo} />
                 </Link>
               </div>
               <div className="col-md-6 col-8 d-flex align-items-center">
