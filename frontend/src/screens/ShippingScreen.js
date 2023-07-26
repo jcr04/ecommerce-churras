@@ -29,7 +29,7 @@ const ShippingScreen = ({ history }) => {
           className="Login col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
-          <h6>DELIVERY ADDRESS</h6>
+          <h6>ENDEREÇO DE ENTREGA</h6>
           <input
             type="text"
             placeholder="Enter address"

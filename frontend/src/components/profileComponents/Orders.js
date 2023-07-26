@@ -15,7 +15,7 @@ const Orders = (props) => {
         <>
           {orders.length === 0 ? (
             <div className="col-12 alert alert-info text-center mt-3">
-              No Orders
+              Sem pedidos
               <Link
                 className="btn btn-success mx-2 px-3 py-2"
                 to="/"
@@ -23,7 +23,7 @@ const Orders = (props) => {
                   fontSize: "12px",
                 }}
               >
-                START SHOPPING
+                INICIE SUA COMPRA
               </Link>
             </div>
           ) : (
@@ -33,7 +33,7 @@ const Orders = (props) => {
                   <tr>
                     <th>ID</th>
                     <th>STATUS</th>
-                    <th>DATE</th>
+                    <th>DATA</th>
                     <th>TOTAL</th>
                   </tr>
                 </thead>

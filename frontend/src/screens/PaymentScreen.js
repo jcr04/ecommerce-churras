@@ -30,7 +30,7 @@ const PaymentScreen = ({ history }) => {
           className="Login2 col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
-          <h6>SELECT PAYMENT METHOD</h6>
+          <h6>SELECIONE O MÉTODO DE PAGAMENTO</h6>
           <div className="payment-container">
             <div className="radio-container">
               <input
@@ -39,7 +39,7 @@ const PaymentScreen = ({ history }) => {
                 value={paymentMethod}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <label className="form-check-label">PayPal or Credit Card</label>
+              <label className="form-check-label">PayPal ou Cartão de crédito</label>
             </div>
           </div>
 

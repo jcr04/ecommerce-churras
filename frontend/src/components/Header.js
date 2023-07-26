@@ -33,25 +33,26 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+55 11 5899 9999</p>
-              <p>info@BBQFast.com</p>
+              <p>+55 21 4321-1234</p>
+              <p>info@bbqfast.com.br</p>
+              <p>BBQ FAST</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="">
+              <Link to="https://www.facebook.com/wearebrf/?locale=pt_BR" target="_blank">
                 <i className="fab fa-facebook-f"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.instagram.com/brf_global/" target="_blank">
                 <i className="fab fa-instagram"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.linkedin.com/company/brf/?originalSubdomain=br" target="_blank">
                 <i className="fab fa-linkedin-in"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.youtube.com/user/brfglobal" target="_blank">
                 <i className="fab fa-youtube"></i>
               </Link>
-              <Link to="">
+              {/* <Link to="#" target="_blank">
                 <i className="fab fa-pinterest-p"></i>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

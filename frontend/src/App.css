@@ -41,11 +41,12 @@ textarea:focus {
 }
 .Announcement {
   background-color:#FFCB05;
-  padding: 10px 0px 6px 0px;
+  padding: 10px 0px 10px 0px;
 }
+
 .Announcement .col-md-6 p {
   color: #D90101;
-  margin-right: 6rem;
+  margin-right: 3rem;
   font-size: 15px;
 }
 .Announcement .col-12 a {
@@ -206,9 +207,9 @@ textarea:focus {
 /* NEWSLATTER */
 .subscribe-section {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.226)),
-    url("https://sasshoes-com.s3.us-west-2.amazonaws.com/img/banner-uplift-21.jpg")
+    url("https://soubh.uai.com.br/uploads/event/image/23923/main_Uai_BBQ_festival_de_churrasco_na_Pampulha_orla_ingressos_quanto_custa_info.jpg")
       no-repeat scroll center / cover;
-  padding: 100px 0 100px;
+  padding: 70px 0 70px;
 }
 .subscribe-head h2 {
   color: #fff;

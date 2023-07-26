@@ -10,7 +10,7 @@ const ContactInfo = () => {
               <i className="fas fa-phone-alt"></i>
             </div>
             <h5>Contato</h5>
-            <p>((11)5999-8888)</p>
+            <p>(21)4321-1234</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
@@ -19,7 +19,7 @@ const ContactInfo = () => {
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h5>Endereço</h5>
-            <p>Av. Paulista, 1245 - 5º andar</p>
+            <p>Av. Ivan Lins, 1234 - 10º andar</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <i className="fas fa-fax"></i>
             </div>
             <h5>E-mail</h5>
-            <p>contato@ecommerce.com.br</p>
+            <p>contato@bbqfast.com.br</p>
           </div>
         </div>
       </div>
