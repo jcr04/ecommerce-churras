@@ -40,16 +40,16 @@ textarea:focus {
   padding: 0;
 }
 .Announcement {
-  background-color: #1cb803;
+  background-color:#FFCB05;
   padding: 10px 0px 6px 0px;
 }
 .Announcement .col-md-6 p {
-  color: white;
+  color: #D90101;
   margin-right: 6rem;
   font-size: 15px;
 }
 .Announcement .col-12 a {
-  color: white;
+  color: #D90101;
   margin-right: 2rem;
   font-size: 15px;
 }
@@ -66,11 +66,17 @@ textarea:focus {
 }
 .search-button {
   width: 20%;
-  background-color: black;
-  color: white;
+  background-color: #D90101;
+  color: rgb(255, 255, 255);
   border: 0;
   text-transform: uppercase;
   font-size: 12px;
+  border:  1px solid #FFCB05;
+}
+.search-button:hover{
+  background-color: #df4141;
+  border:  1px solid #D90101;
+ 
 }
 .Login-Register a {
   text-transform: uppercase;
@@ -109,7 +115,8 @@ textarea:focus {
   margin: 0 !important;
 }
 .dropdown-menu a:hover {
-  background-color: #1cb803 !important;
+  background: #D90101 !important;;
+  border: 1px solid #FFCB05 !important;
   color: #ffffff !important;
 }
 .mobile-header {
@@ -232,7 +239,8 @@ textarea:focus {
   width: 460px;
 }
 .form-section input[type="submit"] {
-  background: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   border: 0 none;
   border-radius: 25px;
   color: #fff;
@@ -242,6 +250,11 @@ textarea:focus {
   padding: 0 58px;
   text-transform: uppercase;
   font-size: 12px;
+  border: 1px solid #FFCB05;
+}
+.form-section input[type="submit"]:hover{
+  background-color: #f53f3f;
+  border:  1px solid #D90101;
 }
 /* CONTACT */
 .contactInfo {
@@ -259,15 +272,15 @@ textarea:focus {
   flex-direction: column;
   padding: 40px 0;
   box-shadow: 0px 0px 27px 0px rgb(243, 243, 243);
-}
+} 
 .info-image {
   width: 50px;
   height: 50px;
-  border: 2px solid #1cb803;
+  border: 2px solid #D90101;
   border-radius: 100px;
   font-size: 20px;
-  color: #1cb803;
-}
+  color: #D90101;
+} 
 .box-info h5 {
   font-weight: bold;
   font-size: 19px;
@@ -351,7 +364,8 @@ textarea:focus {
 }
 .round-black-btn:hover,
 .round-black-btn:focus {
-  background: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
 }
 
 /* LOGIN */
@@ -384,10 +398,16 @@ textarea:focus {
   margin-top: 20px;
   padding: 20px 0;
   border: 0;
-  background-color: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   border-radius: 5px;
   text-transform: uppercase;
   color: white;
+}
+.Login button:hover,
+.Login2 button:hover{
+background-color: #df4141;
+  border:  1px solid #D90101;
 }
 .Login button a,
 .Login2 button a {
@@ -469,7 +489,8 @@ textarea:focus {
   margin-top: 20px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   color: #ffffff;
 }
 /* orders */
@@ -495,7 +516,8 @@ textarea:focus {
 }
 
 .remove-button {
-  background-color: red;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   width: 25px;
   height: 25px;
   border-radius: 100px;
@@ -562,7 +584,8 @@ textarea:focus {
   border: 0px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   color: #ffffff;
 }
 .cart-buttons a:nth-child(1) button {
@@ -570,12 +593,12 @@ textarea:focus {
 }
 /* FOOTER */
 .footer {
-  background-color: #ececec;
+  background-color: #FFCB05;
 }
 .card-name {
   width: 4%;
   margin: 10px;
-}
+} 
 .card-name img {
   width: 100%;
   height: 50px;
@@ -639,7 +662,8 @@ textarea:focus {
   border: 0px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background: #D90101;
+  border: 1px solid #FFCB05;
   color: #ffffff;
 }
 
@@ -651,4 +675,13 @@ textarea:focus {
 .page-item.active .page-link {
   background-color: black;
   border: 1px solid black;
+}
+
+.btn-success{
+  background: #e17619 !important;
+  border: 1px solid #FFCB05;
+}
+.btn-success:hover{
+  background-color: #df4141;
+  border:  1px solid #D90101;
 }
