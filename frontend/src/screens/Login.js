@@ -6,6 +6,8 @@ import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
 import { auth } from "../firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
