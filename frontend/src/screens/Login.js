@@ -5,6 +5,7 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
+import { auth } from "../firebase";
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -23,9 +24,32 @@ const Login = ({ location, history }) => {
     }
   }, [userInfo, history, redirect]);
 
-  const submitHandler = (e) => {
+  //const submitHandler = (e) => {
+    //e.preventDefault();
+    //dispatch(login(email, password));
+  //};
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    dispatch(login(email, password));
+    try {
+      await auth.signInWithEmailAndPassword(email, password); // Firebase email/password login
+
+    } catch (error) {
+
+      console.log("Error logging in:", error.message);
+    }
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+      .then((result) => {
+
+      })
+      .catch((error) => {
+
+        console.log("Error logging in with Google:", error.message);
+      });
   };
 
   return (
@@ -34,10 +58,7 @@ const Login = ({ location, history }) => {
       <div className="container d-flex flex-column justify-content-center align-items-center login-center">
         {error && <Message variant="alert-danger">{error}</Message>}
         {loading && <Loading />}
-        <form
-          className="Login col-md-8 col-lg-4 col-11"
-          onSubmit={submitHandler}
-        >
+        <form className="Login col-md-8 col-lg-4 col-11" onSubmit={submitHandler}>
           <input
             type="email"
             placeholder="Email"
@@ -52,12 +73,11 @@ const Login = ({ location, history }) => {
           />
           <button type="submit">Login</button>
           <p>
-            <Link
-              to={redirect ? `/register?redirect=${redirect}` : "/register"}
-            >
+            <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
               Criar conta
             </Link>
           </p>
+          <button onClick={handleGoogleLogin}>Login with Google</button>
         </form>
       </div>
     </>
