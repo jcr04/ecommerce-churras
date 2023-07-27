@@ -1,6 +1,6 @@
 # ecommerce-churras(BBQFAST)
  
-essa é uma aplicação em react de um ecommence de produtos relacionados a churrasco, feita em react.
+(Site me desenvolvimento) essa é uma aplicação em react de um ecommence de produtos relacionados a churrasco.
 
 ## Tela Home(Inicial)
 ![Captura de tela 2023-07-26 221331](https://github.com/jcr04/ecommerce-churras/assets/70778525/bf764e8e-5fa3-4a6c-88f2-871ea1481d2e)
