@@ -5,9 +5,10 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
-import { auth } from "../firebase";
+import { auth, googleProvider } from "../firebase";
+import { useHistory } from "react-router-dom";
 
-const Login = ({ location, history }) => {
+const Login = ({ location }) => { // Remova a declaração do 'history' como argumento
   window.scrollTo(0, 0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +19,7 @@ const Login = ({ location, history }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { error, loading, userInfo } = userLogin;
 
+  const history = useHistory(); // Mantenha a declaração do 'history' aqui
   useEffect(() => {
     if (userInfo) {
       history.push(redirect);
@@ -30,19 +32,18 @@ const Login = ({ location, history }) => {
   };
 
   const handleGoogleLogin = () => {
-    const provider = new auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider)
+    auth.signInWithPopup(googleProvider)
       .then((result) => {
-        // The user is now authenticated with Google
-        // You can access the user data using result.user
-        // For example: const user = result.user;
+        // O usuário está agora autenticado com o Google
+        // Você pode acessar os dados do usuário usando result.user
+        // Por exemplo: const user = result.user;
+        history.push("/profile");
       })
       .catch((error) => {
-        // Handle login error
+        // Trate o erro de login
         console.log("Error logging in with Google:", error.message);
       });
   };
-
 
   return (
     <>
