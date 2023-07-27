@@ -38,18 +38,30 @@ const Header = () => {
               <p>BBQ FAST</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="https://www.facebook.com/wearebrf/?locale=pt_BR" target="_blank">
+              {/* <Link to="https://www.facebook.com/wearebrf/?locale=pt_BR" target="_blank">
                 <i className="fab fa-facebook-f"></i>
-              </Link>
-              <Link to="https://www.instagram.com/brf_global/" target="_blank">
+              </Link> */}
+              <a href="https://www.facebook.com/wearebrf/?locale=pt_BR" target="_blank">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              {/* <Link to="https://www.instagram.com/brf_global/" target="_blank">
                 <i className="fab fa-instagram"></i>
-              </Link>
-              <Link to="https://www.linkedin.com/company/brf/?originalSubdomain=br" target="_blank">
+              </Link> */}
+              <a href="https://www.instagram.com/brf_global/" target="_blank">
+                <i className="fab fa-instagram"></i>
+              </a>
+              {/* <Link to="https://www.linkedin.com/company/brf/?originalSubdomain=br" target="_blank">
                 <i className="fab fa-linkedin-in"></i>
-              </Link>
-              <Link to="https://www.youtube.com/user/brfglobal" target="_blank">
+              </Link> */}
+              <a href="https://www.linkedin.com/company/brf/?originalSubdomain=br" target="_blank">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              {/* <Link to="https://www.youtube.com/user/brfglobal" target="_blank">
                 <i className="fab fa-youtube"></i>
-              </Link>
+              </Link> */}
+              <a href="https://www.youtube.com/user/brfglobal" target="_blank">
+                <i className="fab fa-youtube"></i>
+              </a>
               {/* <Link to="#" target="_blank">
                 <i className="fab fa-pinterest-p"></i>
               </Link> */}
