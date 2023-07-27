@@ -8,7 +8,12 @@ import { login } from "./../Redux/Actions/userActions";
 import { auth, googleProvider } from "../firebase";
 import { useHistory } from "react-router-dom";
 
-const Login = ({ location }) => { // Remova a declaração do 'history' como argumento
+const testUser = {
+  email: "test@example.com",
+  password: "testpassword",
+};
+
+const Login = ({ location }) => {
   window.scrollTo(0, 0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
