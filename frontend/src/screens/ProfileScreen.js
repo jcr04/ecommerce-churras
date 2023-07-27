@@ -6,6 +6,7 @@ import { getUserDetails } from "../Redux/Actions/userActions";
 import Orders from "./../components/profileComponents/Orders";
 import moment from "moment";
 import { listMyOrders } from "../Redux/Actions/OrderActions";
+import { auth } from "../firebase"
 
 const ProfileScreen = () => {
   window.scrollTo(0, 0);
