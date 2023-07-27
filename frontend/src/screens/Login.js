@@ -5,6 +5,7 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
+import { auth } from "../firebase";
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -26,6 +27,20 @@ const Login = ({ location, history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password));
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        // The user is now authenticated with Google
+        // You can access the user data using result.user
+        // For example: const user = result.user;
+      })
+      .catch((error) => {
+        // Handle login error
+        console.log("Error logging in with Google:", error.message);
+      });
   };
 
   return (
@@ -57,7 +72,8 @@ const Login = ({ location, history }) => {
             >
               Criar conta
             </Link>
-          </p>
+            </p>
+          <button onClick={handleGoogleLogin}>Login with Google</button>
         </form>
       </div>
     </>
