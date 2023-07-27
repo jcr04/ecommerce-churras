@@ -1,7 +1,7 @@
-import "firebase/auth";
 import firebase from "firebase";
+import "firebase/auth";
 import "firebase/firestore";
-
+    
 const firebaseConfig = {
     apiKey: "AIzaSyBtJVNGzRic7QL5NwSux1viw5kxAP_X4iY",
     authDomain: "bbq-login-auth.firebaseapp.com",
