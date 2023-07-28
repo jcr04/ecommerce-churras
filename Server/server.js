@@ -1,20 +1,23 @@
 import express from "express";
 import products from "./data/Products.js";
+import usersRouter from "./users.js"; // Substitua "users.js" pelo nome do arquivo que você criou para gerenciar autenticação e usuários
 
-//Testando uma API
 const app = express();
 
-// buscamos todos os produtos da API
-app.get("/api/products", (req,res) => {
-    res.json(products)
+// Configuração para permitir que o Express trabalhe com JSON no corpo da requisição
+app.use(express.json());
+
+// Rotas para os produtos
+app.get("/api/products", (req, res) => {
+  res.json(products);
 });
 
-// buscamos produtos por id
-app.get("/api/products/:id", (req,res) => {
-    const product = products.find((p) => p._id === req.params.id);
-    res.json(product)
+app.get("/api/products/:id", (req, res) => {
+  const product = products.find((p) => p._id === req.params.id);
+  res.json(product);
 });
 
+// Rotas de autenticação e usuário
+app.use("/api/users", usersRouter); // Substitua "users" pelo caminho desejado para as rotas de autenticação e usuário
 
-//Informa se o servidor funcionou
 app.listen(5000, console.log("O servidor está executando na porta 5000"));

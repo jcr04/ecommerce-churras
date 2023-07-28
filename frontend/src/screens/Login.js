@@ -7,6 +7,7 @@ import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
 import { auth, googleProvider } from "../firebase";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const testUser = {
   email: "test@example.com",
@@ -33,7 +34,20 @@ const Login = ({ location }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(email, password));
+    
+    // Fazer a solicitação POST para o servidor JSON usando o axios
+    axios.post("http://localhost:5000/api/users", {
+      email: email,
+      password: password,
+    })
+    .then((response) => {
+      // Se as credenciais estiverem corretas, redirecione para a página de perfil
+      history.push("/profile");
+    })
+    .catch((error) => {
+      // Se ocorrer algum erro, exiba a mensagem de erro no console
+      console.log("Error logging in:", error.message);
+    });
   };
 
   const handleGoogleLogin = () => {
