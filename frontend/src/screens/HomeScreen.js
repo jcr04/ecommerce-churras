@@ -4,6 +4,7 @@ import ShopSection from "./../components/homeComponents/ShopSection";
 import ContactInfo from "./../components/homeComponents/ContactInfo";
 import CalltoActionSection from "./../components/homeComponents/CalltoActionSection";
 import Footer from "./../components/Footer";
+import Tips from "../components/homeComponents/tips";
 
 const HomeScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -13,6 +14,7 @@ const HomeScreen = ({ match }) => {
     <div>
       <Header />
       <ShopSection keyword={keyword} pagenumber={pagenumber} />
+      <Tips/>
       <CalltoActionSection />
       <ContactInfo />
       <Footer />
