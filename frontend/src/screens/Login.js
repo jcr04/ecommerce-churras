@@ -5,16 +5,8 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
-import { auth, googleProvider } from "../firebase";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
 
-const testUser = {
-  email: "test@example.com",
-  password: "testpassword",
-};
-
-const Login = ({ location }) => {
+const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +17,6 @@ const Login = ({ location }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { error, loading, userInfo } = userLogin;
 
-  const history = useHistory(); // Mantenha a declaração do 'history' aqui
   useEffect(() => {
     if (userInfo) {
       history.push(redirect);
@@ -34,34 +25,7 @@ const Login = ({ location }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    
-    // Fazer a solicitação POST para o servidor JSON usando o axios
-    axios.post("http://localhost:5000/api/users", {
-      email: email,
-      password: password,
-    })
-    .then((response) => {
-      // Se as credenciais estiverem corretas, redirecione para a página de perfil
-      history.push("/profile");
-    })
-    .catch((error) => {
-      // Se ocorrer algum erro, exiba a mensagem de erro no console
-      console.log("Error logging in:", error.message);
-    });
-  };
-
-  const handleGoogleLogin = () => {
-    auth.signInWithPopup(googleProvider)
-      .then((result) => {
-        // O usuário está agora autenticado com o Google
-        // Você pode acessar os dados do usuário usando result.user
-        // Por exemplo: const user = result.user;
-        history.push("/profile");
-      })
-      .catch((error) => {
-        // Trate o erro de login
-        console.log("Error logging in with Google:", error.message);
-      });
+    dispatch(login(email, password));
   };
 
   return (
@@ -93,8 +57,7 @@ const Login = ({ location }) => {
             >
               Criar conta
             </Link>
-            </p>
-          <button onClick={handleGoogleLogin}>Login with Google</button>
+          </p>
         </form>
       </div>
     </>
