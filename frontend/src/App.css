@@ -687,3 +687,10 @@ background-color: #df4141;
   background-color: #df4141;
   border:  1px solid #D90101;
 }
+
+.alert-danger{
+  color: #338420 !important;
+  background-color: #e0f8d7 !important;
+  border-color: #c9f5c2 !important;
+}
+

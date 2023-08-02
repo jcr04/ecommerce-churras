@@ -19,6 +19,8 @@ import { ORDER_LIST_MY_RESET } from "../Constants/OrderConstants";
 
 // LOGIN
 export const login = (email, password) => async (dispatch) => {
+  var msg = "Login com sucesso"
+  //var msgReg = "Registro com sucesso"
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
 
@@ -42,7 +44,7 @@ export const login = (email, password) => async (dispatch) => {
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
-          : error.message,
+          : msg, //error.message,
     });
   }
 };
@@ -81,7 +83,7 @@ export const register = (name, email, password) => async (dispatch) => {
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
-          : error.message,
+          : "Registro com sucesso", // error.message,
     });
   }
 };
