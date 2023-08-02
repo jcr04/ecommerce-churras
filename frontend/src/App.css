@@ -693,4 +693,11 @@ background-color: #df4141;
   background-color: #e0f8d7 !important;
   border-color: #c9f5c2 !important;
 }
-
+.parc-link{
+  color: #D90101;
+  margin-right: 3rem;
+  font-size: 15px;
+}
+.parc-link:hover{
+color: #df4141;
+}
