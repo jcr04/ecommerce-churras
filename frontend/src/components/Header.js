@@ -36,6 +36,7 @@ const Header = () => {
               <p>+55 21 4321-1234</p>
               <p>info@bbqfast.com.br</p>
               <p>BBQ FAST</p>
+              <p><Link  to="/parceiro" className="parc-link">Parceiro</Link></p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               {/* <Link to="https://www.facebook.com/wearebrf/?locale=pt_BR" target="_blank">

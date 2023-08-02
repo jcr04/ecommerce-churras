@@ -1,0 +1,30 @@
+.main-ca{
+    height: 100vh;
+    background-color: #f1f2f3;
+}
+.par-h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #767693;
+    font-size: 53px;
+   
+}
+.parc-desc{
+
+}
+.parc-desc p{
+    margin-top: 120px;
+    text-align: center;
+    font-size: 25px;
+}
+.link-d{
+    color: rgb(167, 167, 255);
+    cursor: pointer;
+}
+@media screen and (max-width: 899px) {
+    @media (orientation: landscape) {
+        .main-ca{
+            height: auto !important;
+           
+        }}
+  }
