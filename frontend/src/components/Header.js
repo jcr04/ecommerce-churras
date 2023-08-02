@@ -20,11 +20,11 @@ const Header = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (keyword.trim()) {
+    /*if (keyword.trim()) {
       history.push(`/search/${keyword}`);
     } else {
       history.push("/");
-    }
+    }*/
   };
   return (
     <div>
@@ -143,7 +143,7 @@ const Header = () => {
                       placeholder="Search"
                       onChange={(e) => setKeyword(e.target.value)}
                     />
-                    <button type="submit" className="search-button">
+                    <button disabled type="submit" className="search-button">
                       buscar
                     </button>
                   </form>
